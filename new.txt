@@ -1,1 +1,2 @@
-one --Git is a free and open source distributed version control system 
+one --Git is a free and open source distributed version control system //做一次添加操作
+two --Git is easy to learn and has a tiny footprint with lightning fast performance//不添加直接提交
