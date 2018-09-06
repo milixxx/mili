@@ -1,0 +1,29 @@
+server:
+  port: 8011
+spring:
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/my?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+    initialSize: 4
+    maxActive: 10
+  dubbo: 
+    application:
+      name: provider
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    protocol:
+      name: dubbo
+      prot: 20880
+    scan: com.example.demo.service #接口包路径
+#配置mapper文件路径    
+mybatis:
+  mapper-locations: classpath*:static/mapper/*Mapper.xml
+#打印sql   com.example.demo.dao为mybatis接口所在包
+logging:
+  level: 
+    com.example.demo.dao: DEBUG
+
+
+  

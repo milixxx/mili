@@ -1,0 +1,16 @@
+server:
+  port: 8012
+spring:
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/my?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+    initialSize: 4
+    maxActive: 10
+  dubbo: 
+    application:
+      name: consumer
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    scan: com.example.demo.controller
